@@ -14,19 +14,16 @@
 <div class='container'>
  
 
-<a href="#" data-toggle="modal"  data-target='#myModal'>Toggle popover</a>
-
+  <a href="#" data-toggle="modal"  data-target='#myModal'>Toggle popover</a>
   <button type='button' class='btn btn-info btn-lg' data-toggle='modal' data-target='#myModal'>Open Modal</button>
 
  
   <div class='modal fade' id='myModal' role='dialog'>
     <div class='modal-dialog'>
-
-
       <div class='modal-content'>
         <div class='modal-header'>
         <button type='button' class='close' data-dismiss='modal'>&times;</button>
-                                                                <h4 class='modal-title'><b>Modal Header</b></h4>
+        <h4 class='modal-title'><b>Modal Header</b></h4>
         </div>
         <div class='modal-body'>
         <p>Some text in the modal.</p>
@@ -35,7 +32,6 @@
         <button type='button' class='btn btn-default' data-dismiss='modal'>Sluit</button>
         </div>
       </div>
-
     </div>
   </div>
 
