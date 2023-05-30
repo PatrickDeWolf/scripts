@@ -15,10 +15,11 @@
 <div class='container'>
  
 
+                      
+                      
+                      
   <a href="#" data-toggle="modal"  data-target='#myModal'>Toggle popover</a>
   <button type='button' class='btn btn-info btn-lg' data-toggle='modal' data-target='#myModal'>Open Modal</button>
-
- 
   <div class='modal fade' id='myModal' role='dialog'>
     <div class='modal-dialog'>
       <div class='modal-content'>
@@ -37,7 +38,28 @@
   </div>
 
                                                                           
+  
                                                                           
+                                                                          
+<script>
+		function extert()
+		{ //var waarde=document.getElementById("email").value;	
+      var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+			   if(this.responseText==1)
+				{	
+				}
+			   if(this.responseText==0)
+				{	
+        }
+			}
+		};
+		xhttp.open("GET", "./verwerk.php?t="+waarde	, true);
+		xhttp.send(); 
+		}
+		extert();
+		</script>                                                                          
                                                                           
 </div>
 </body>
