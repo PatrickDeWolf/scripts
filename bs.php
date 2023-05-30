@@ -58,7 +58,7 @@
 		xhttp.open("GET", "./verwerk.php?t="+waarde	, true);
 		xhttp.send(); 
 		}
-		extert();
+		//extert();
 		</script>                                                                          
                                                                           
 </div>
