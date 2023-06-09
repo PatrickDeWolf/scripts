@@ -70,6 +70,58 @@ echo uniqid();
 ?>
  
 
+									  
+									  
+									  
+<?php
+function passwordregex()
+{	echo"<div class='row'>";
+		echo"<div class='input-group col-xs-6'>";
+		echo"<small>Gelieve uw wachtwoord te herhalen.</small>";
+		echo"<input type='text' class='col-sm-6 form-control' id='pw1' onkeyup=\"pwdncheck('pw1','pw2','pwknop1')\">";
+		echo"<span class='input-group-addon' STYLE='background-color:transparent; border:0px;'>";
+		echo"<i class='glyphicon glyphicon-ok' id='pw1ok' STYLE='color:transparent;'></i></span>";
+		echo"</div>";
+		echo"<div class='input-group col-xs-6'>";
+		echo"<small>Gelieve uw wachtwoord te herhalen.</small>";
+		echo"<input type='text' class='col-sm-6 form-control' id='pw2' onkeyup=\"pwdncheck('pw1','pw2','pwknop1')\">";
+		echo"<span class='input-group-addon' STYLE='background-color:transparent; border:0px;'>";
+		echo"<i class='glyphicon glyphicon-ok' id='pw2ok' STYLE='color:transparent;'></i></span>";
+		echo"</div>"; 
+	echo"</div>";
+	echo"<div class='row'>";
+		echo"<div class='col-xs-12'>";
+			echo"<button id='pwknop1' class='btn btn-primary' disabled>wijzig</button>";
+		echo"</div>";
+	echo"</div>";
+	echo"<script>
+	function pwdncheck(pw1,pw2,knop)
+	{	var pw1_val=document.getElementById(pw1).value;
+		var pw2_val=document.getElementById(pw2).value;		
+		var strongRegex = new RegExp(\"^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})\");
+		if(strongRegex.test(pw1_val) ==false)
+		{	document.getElementById('pw1ok').style.color='transparent';
+			document.getElementById('pw2ok').style.color='transparent';
+		}else{
+			document.getElementById('pw1ok').style.color='green';
+			if(pw1_val==pw2_val)
+			{	document.getElementById('pw2ok').style.color='green';
+				document.querySelector('#'+knop).disabled = false;
+			}else{
+				document.getElementById('pw2ok').style.color='transparent';
+				document.querySelector('#'+knop).disabled = true;
+			}
+		}
+	}
+	</script>";
+}
+passwordregex();
+?>
+									  
+									  
+									  
+									  
+									  
 <div class='panel-group' id='accordion'>
 	<div class='panel panel-default'>
 		<div class='panel-heading'>
