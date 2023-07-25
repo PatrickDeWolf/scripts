@@ -17,6 +17,8 @@ function asl($birthday,$gender)
 			$jaar=$year;
 		}
 	$age=floor(((date("Y")-$jaar)*512+(date("m")-$maand)*32+date("d")-$dag)/512);
-	return $icon." ".$age."j.";
+	if($age==date('Y')){$age="";} else{$age=$age."y.";}
+	return $icon." ".$age;
+	
 }
 ?>
